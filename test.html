@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gestion des réclamations de notes</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpeg" rel="icon">
+  <link href="assets/img/apple-touch-icon.jpeg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <style>
+    /* Center the button */
+    .button-class {
+      display: flex;
+      margin-top:10%;
+      margin-left: 30%;
+      margin-right: 30%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+      border-radius: 5px;
+      font-size: large;
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); /* Adjust the shadow as needed */
+      background-color: blue;
+      color: white;
+    }
+
+    /* Add shadow and change the button color to blue */
+    .button-class button {
+      box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); /* Adjust the shadow as needed */
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<form action="index_redirect.html" method="POST">
+ <script
+   src="https://checkout.fedapay.com/js/checkout.js"
+   data-public-key="pk_live_NVw62EiQ_Yu6mvPq13vuUapq"
+   data-button-text="Payez 1222Fcfa"
+   data-button-class="button-class"
+   data-transaction-amount="1200"
+   data-transaction-description="Paiement des frais de réclamation"
+   data-currency-iso="XOF"
+   callback_url: "https://honeybee-right-shortly.ngrok-free.app/dissertation_UI/index_redirect.html"
+   
+   data-widget-description="Facilement et simplement, réclamez en ligne"
+   data-widget-image="E:\P_Projects\dissertation-main\public\dissertation_UI\assets\img\logo.jpeg"
+   data-widget-title="eGraC">
+ </script>
+</form>
+
+      
+ 
+    <footer id="footer" class="footer">
+      <!-- Le contenu de votre pied de page (footer) va ici -->
+      <!-- ... (footer content) ... -->
+    </footer>
+  </body>
+
+</html>

@@ -1,0 +1,186 @@
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Center the form on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Style the form container */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Adjust the width as needed */
+    width: 100%;
+    display: flex; /* Display form as flex container */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: space-between; /* Add space between form groups */
+    margin-top: 20px; /* Add margin to separate form from breadcrumbs */
+}
+
+/* Style labels and inputs */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    flex: 1; /* Equal width for labels in both groups */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px; /* Add margin to separate the button */
+}
+
+/* Style the submit button on hover */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style error messages */
+.text-red-500 {
+    color: #ff0000;
+}
+
+/* Styles communs */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Breadcrumbs */
+  .breadcrumbs {
+    background-image: url('assets/img/breadcrumbs-bg.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  /* Ajoutez une hauteur minimale pour éviter le chevauchement du contenu */
+  #main {
+    min-height: calc(100vh - 160px); /* Ajustez la valeur en fonction de vos besoins */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Formulaire de réclamation */
+  .registration-form {
+    background-color: #f8f9fa; /* Ajoutez une couleur d'arrière-plan pour le formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px; /* Ajustez la largeur maximale du formulaire */
+  }
+  
+  /* Titre du formulaire */
+  .infR {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Labels */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Champs de texte */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff; /* Couleur de mise au point */
+  }
+  
+  /* Sélecteurs */
+  select.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.293 9.293a1 1 0 011.414 0L12 13.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z"></path></svg>');
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+  }
+  
+  /* Bouton de soumission */
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles responsifs pour les écrans de petite taille */
+  @media (max-width: 768px) {
+    .registration-form {
+      padding: 10px;
+    }
+    
+    .form-control {
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Styles responsifs pour les écrans de grande taille */
+  @media (min-width: 1200px) {
+    .registration-form {
+      max-width: 1000px;
+    }
+  }
+  
+/* Ajoutez ceci à votre feuille de style CSS existante */
+@media (max-width: 769px) {
+  .list-unstyled {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .list-unstyled li {
+    display: inline-block;
+    margin-right: 10px; /* Espace entre les éléments de la liste */
+  }
+}

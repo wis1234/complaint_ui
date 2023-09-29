@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>gestion des reclamations de notes</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpeg" rel="icon">
+  <link href="assets/img/apple-touch-icon.jpeg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/my_style1.css" rel="stylesheet">
+
+
+
+  <style>
+    /* Center the button */
+    .button-class {
+      display: flex;
+      margin-top:10%;
+      margin-left: 30%;
+      margin-right: 30%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+      border-radius: 5px;
+      font-size: large;
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); /* Adjust the shadow as needed */
+      background-color: blue;
+      color: white;
+    }
+
+    /* Add shadow and change the button color to blue */
+    .button-class button {
+      box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); /* Adjust the shadow as needed */
+      background-color: blue;
+      color: white;
+    }
+  </style>
+
+
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Reclamation</h2>
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li class="white-text">Reclamation</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+
+  <!-- ======= Registration Form Section ======= -->
+  <section id="registration-form" class="registration-form">
+    <!-- First Form -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); padding: 20px; margin-right: 10px;">
+          <form action="recapitulatif.html" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <div class="form-group">
+                <br><br>
+              </div>
+              <div class="form-group">
+                <div class="form-group">
+                  <p>Information personnelle</p>
+                  <label for="ac_year">Année académique:</label>
+                  <select id="ac_year" class="form-control" name="ac_year">
+                    <optgroup label="academic year">
+                      <option value="2022-2023">2022-2023</option>
+                      <option value="2023-2024">2023-2024</option>
+                      <option value="2024-2025">2024-2025</option>
+                      <option value="2025-2026">2025-2026</option>
+                      <option value="2026-2027">2026-2027</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ac_level">Année d'étude:</label>
+                <select id="ac_level" class="form-control" name="ac_level">
+                  <optgroup label="academic level">
+                    <option value="Licence 1">Licence 1</option>
+                    <option value="Licence 2">Licence 2</option>
+                    <option value="Licence 3">Licence 3</option>
+                    <option value="Master 1">Master 1</option>
+                    <option value="Master 2">Master 2</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mat">Matricule:</label>
+                <input type="text" name="mat" class="form-control" id="mat" placeholder="17104018" maxlength="8">
+              </div>
+              <!-- Partie masquée -->
+              <div class="form-group" >
+                <label for="field">Filière:</label>
+                <select id="field" class="form-control" name="field">
+                  <optgroup label="">
+                    <option value="Sciences Economiques">Sciences Economiques</option>
+                    <option value="field">Sciences de Gestion</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="speciality">Spécialité:</label>
+                <select id="speciality" class="form-control" name="speciality">
+                  <optgroup label="">
+                    <option value="Economie Appliquée">Economie Appliquée</option>
+                    <option value="Economie et Finance des Collectivités Locales">Economie et Finance des Collectivités Locales</option>
+                    <option value="Economie et Gestion des Exploitations Agricoles">Economie et Gestion des Exploitations Agricoles</option>
+                    <option value="Economie et Gestion des Micro-Finances">Economie et Gestion des Micro-Finances</option>
+                    <option value="Statistique et Econometrie">Statistique et Econometrie</option>
+                    <option value="Tronc commun de Licence 1">Tronc commun de Licence 1</option>
+                    <option value="Comptabilité et Finance">Comptabilité et Finance</option>
+                    <option value="Gestion des banques et assurances">Gestion des banques et assurances</option>
+                    <option value="Gestion des ressources humaines">Gestion des ressources humaines</option>
+                    <option value="Marketing et action commerciale">Marketing et action commerciale</option>
+                  </optgroup>
+                </select>
+              </div>
+            </fieldset>
+          </div>
+          <!-- Second Form -->
+          <div class="col-lg-4" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); padding: 20px; margin-left: 10px;">
+            <fieldset>
+              <div class="form-group">
+                <p>Information de réclamation</p>
+                <label for="exam_type">Session:</label>
+                <select name="exam_type" id="exam_type">
+                  <option value="session normale">session normale</option>
+                  <option value="session de rattrapage">session de rattrapage</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="complain_type">Motif:</label>
+                <select name="complain_type" id="complain_type">
+                  <option value="Contestation de note">Contestation de note</option>
+                  <option value="Omission de note">Omission de note</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="ecue_sub">UE:</label>
+                <input type="text" class="form-control" id="ecue_sub" name="ecue_sub" rows="3" placeholder="Unité d'Enseignement">
+              </div>
+              <div>
+                <label for="ecue">ECUE:</label>
+                <input type="text" class="form-control" id="ecue" name="ecue" rows="3" placeholder="Elément Constitutif d'Unité d'Enseignement">
+              </div>
+              <div class="form-group">
+                <label for="fiche_inscription">Fiche d'inscription:</label>
+                <input type="file" class="form-control-file" id="fiche_inscription" name="fiche_inscription" placeholder="Votre fiche de préinscription validée">
+              </div>
+              <div class="form-group">
+                <label for="ue">Quittance:</label>
+                <input type="file" class="form-control-file" id="ue" name="quittance" placeholder="Votre fiche de préinscription validée">
+              </div>
+              <div class="form-group">
+                <label for="bio">Description:</label>
+                <textarea class="form-control" id="bio" name="description" rows="3" placeholder="Briève description du problème"></textarea>
+              </div>
+              <!-- Bouton de soumission -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Suivant</button>
+               
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </section>
+  <!-- End Registration Form Section -->
+
+
+
+
+   
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+
+           
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>FASEG-UAC</h4>
+            <ul>
+              <li><a href="#"><strong>Phone:</strong> +229 97247851</a></li>
+              <li><a href="#"><strong>Email:</strong>ronaldoownpurpose@gmial.com</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Nos Services</h4>
+            <ul>
+              <li><a href="#">Réclamation de note</a></li>
+              <li><a href="#">Demande d'acte academique</a></li>
+
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Réseaux sociaux</h4>
+            <div class="social-links d-flex mt-3">
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+              <li><a href="contact.html">A propos</a></li>
+              <li><a href="#">Termes et confidentialités</a></li>
+
+            </ul>
+          </div>
+          <!-- End footer links column-->
+
+ 
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>faseg/uac</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

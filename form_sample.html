@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>gestion des reclamations de notes</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpeg" rel="icon">
+  <link href="assets/img/apple-touch-icon.jpeg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/my_style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+    <form method="POST" action="{{ route('complaint.submit') }}">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        
+        <!-- First Form Group -->
+        <div class="form-group">
+            <label for="student_id">Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required>
+
+            <label for="complain_type">Complaint Type:</label>
+            <input type="text" id="complain_type" name="complain_type" required>
+
+            <label for="claimant_firstname">Claimant First Name:</label>
+            <input type="text" id="claimant_firstname" name="claimant_firstname" required>
+
+            <label for="claimant_lastname">Claimant Last Name:</label>
+            <input type="text" id="claimant_lastname" name="claimant_lastname" required>
+
+            <label for="claimant_phone">Claimant Phone:</label>
+            <input type="text" id="claimant_phone" name="claimant_phone" required>
+        </div>
+               <!-- First Form Group -->
+               <div class="form-group">
+                <label for="student_id">Student ID:</label>
+                <input type="text" id="student_id" name="student_id" required>
+    
+                <label for="complain_type">Complaint Type:</label>
+                <input type="text" id="complain_type" name="complain_type" required>
+    
+                <label for="claimant_firstname">Claimant First Name:</label>
+                <input type="text" id="claimant_firstname" name="claimant_firstname" required>
+    
+                <label for="claimant_lastname">Claimant Last Name:</label>
+                <input type="text" id="claimant_lastname" name="claimant_lastname" required>
+    
+                <label for="claimant_phone">Claimant Phone:</label>
+                <input type="text" id="claimant_phone" name="claimant_phone" required>
+            </div>
+        
+    </form>
+    <button type="submit">Submit</button>
+</body>
+</body>
+</html>

@@ -1,0 +1,50 @@
+  /* complaints style */
+  /* Style pour les éléments <p> */
+  p {
+    color: #0056b3; /* Couleur bleue */
+    font-weight: bold; /* Texte en gras (si nécessaire) */
+    /* Autres styles de police personnalisés ici si nécessaire */
+  }
+  
+  /* Style pour l'espacement entre les champs de saisie */
+  .form-group {
+    margin-bottom: 20px; /* Augmente la marge en bas de chaque champ de saisie */
+  }
+  
+  /* Style pour déplacer le bouton "Suivant" vers le bas */
+  button.btn-primary {
+    margin-top: 10px; /* Ajustez la valeur selon votre préférence */
+  }
+  
+  /* Style pour les champs "Session" et "Motif" */
+select#exam_type, select#complain_type {
+    width: 100%; /* La même largeur pour les deux champs */
+    height: 40px; /* La même hauteur pour les deux champs (ajustez selon vos besoins) */
+  }
+
+
+  
+  /* Center the button */
+  .button-class {
+    display: flex;
+    margin-top:10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    border-radius: 5px;
+    font-size: large;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); /* Adjust the shadow as needed */
+    background-color: blue;
+    color: white;
+  }
+
+  /* Add shadow and change the button color to blue */
+  .button-class button {
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); /* Adjust the shadow as needed */
+    background-color: blue;
+    color: white;
+  }
