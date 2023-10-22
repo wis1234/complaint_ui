@@ -58,26 +58,30 @@
         <ul>
           <!-- <li><a href="index.html" class="active"><A>Acceuil</A></a></li> -->
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="process.html">Demarche</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <!-- <li><a href="projects.html">Projects</a></li> -->
-          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <!-- <li><a href="process.html">Demarche</a></li> -->
+          <li class="dropdown"><a href=""><span>Démarches</span> <i
+            class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+          <li><a href="complaint_process.html">Réclamation de note</a></li>
+          <li><a href="transcritpt_process.html">Demande de Relevé de note</a></li>
+          <li><a href="certificate_process.html">Demande d'Attestation</a></li>
+          <li><a href="diploma_process.html">Demande de Diplôme</a></li>
+
+        </ul>
+      </li>
+
           <li class="dropdown"><a href="#"><span>Services</span> <i
                 class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="complaint_index.html">Reclamation</a></li>
+              <li><a href="complaint_index.html">Faire une Réclamation</a></li>
 
-              <li class="dropdown"><a href="#"><span>Actes academiques</span> <i
+              <li class="dropdown"><a href="#"><span>Demander un acte academique</span> <i
                     class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-
-
-  
                   <li><a href="transcript_ridirect.html" >Relevé de note</a></li>
                   <li><a href="certificat_redirect.html" >Attestation de succès</a></li>
-                  <li><a href="diploma_ridirect.html">Diplome</a></li>
-                  <!-- <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li> -->
+                  <li><a href="diploma_ridirect.html">Diplôme</a></li>
+
                 </ul>
               </li>
                <!-- <li><a href="#">A propos</a></li> -->
@@ -88,14 +92,22 @@
           </li>
           <li><a href="contact.html">A propos</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html">      </a></li>
-          <li><a href="contact.html">      </a></li>
-          <li><a href="contact.html">      </a></li>
-          <li><a href="contact.html">      </a></li>
+          <!-- <li class="language-selector">
+            <div class="gtranslate_wrapper">
+              <script>
+                window.gtranslateSettings = {"default_language":"fr","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"};
+              </script>
+              <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+            </div>
+          </li> -->
+          
+          
+          <li><a href="contact.html"></a></li>
+
 
           <div class="header-buttons" id="auth_button">
-            <a href="login.html" class="login-button">Login</a>
-            <a href="register.html" class="register-button">Register</a>
+            <a href="login.html" class="login-button">Connexion</a>
+            <a href="register.html" class="register-button">Inscription</a>
           </div>
 
         </ul>
@@ -119,8 +131,13 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2 data-aos="fade-down">Bienvenue  <span></span></h2>
-            <p data-aos="fade-up">Cette plateforme est conçue pour faciliter les réclamations de note aux étudiants de la FASEG/UAC</p>
+            <h2 data-aos="fade-down" style="margin-top: 30px;">Bienvenue <span></span></h2>
+            <p data-aos="fade-up">La FASEG à votre service autrement</p>
+            <!-- <p data-aos="fade-up"> </p> -->
+
+            
+            <p data-aos="fade-up">Désormais, vos réclamations de note et demande d'actes academiques en toute simplicité et en toute facilité</p>
+
             <a data-aos="fade-up" data-aos-delay="200" href="register.html" class="btn-get-started">Commencer</a>
           </div>
         </div>
@@ -228,6 +245,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+
 
 </body>
 

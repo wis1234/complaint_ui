@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>gestion des reclamations de notes</title>
+  <title>Gestion des réclamations de notes</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -14,12 +13,13 @@
   <link href="assets/img/apple-touch-icon.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
-
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,76 +32,86 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: UpConstruction - v1.3.0
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    /* Default style for the h2 element */
+    h2 {
+      font-size: 24px; /* Adjust the size as needed */
+      font-weight: normal; /* Remove any existing bold style */
+    }
+  
+    /* Media query for screens with a maximum width of 577px X 607px */
+    @media (max-width: 577px) and (max-height: 607px) {
+      h2 {
+        font-size: 32px; /* Increase the size for small screens */
+        font-weight: bold; /* Make it bold on small screens */
+      }
+    }
+  </style>
+  
 </head>
 
-<body>
-
-  
-
+<body style="position: relative; min-height: 100vh;">
   <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs d-flex align-items-center"
+         style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-
-        <h2>Login</h2>
+        <h2 style="font-weight: bold; font-size: 40px; ">CONNEXION</h2>
         <ol>
-          <li><a href="index.html">Accueil</a></li>
-          <li class="white-text">Login</li>
+          <li><a href="index.html" style="color: blue;">Accueil</a></li>
+          <li class="white-text">Connexion</li>
         </ol>
       </div>
     </div><!-- End Breadcrumbs -->
 
-<!-- Center the login form and move it a bit to the top -->
-<div class="container" style="height: 50vh;  display: flex; justify-content: center; align-items: center; margin-top: 50px;">
-  <div class="col-lg-6" data-aos="fade-up">
+    
+<!-- Centrez le formulaire de connexion et décalez-le légèrement vers le haut -->
+<div class="container" style="height: 50vh; display: flex; justify-content: center; align-items: center; margin-top: 50px;">
+  <div class="col-lg-6 login-box" data-aos="fade-up">
+    <i class="fas fa-user fa-4x" style="color: blue; display: block; margin-left: 45%;"></i><br><br>
+    <!-- Icône de personne centrée -->
+    <!-- Login Form -->
     <form class="login-form" method="post" action="http://127.0.0.1:8000/api/login">
       <div class="form-group">
-        <label for="email"></label>
-        <input type="email" id="email" name="email" class="form-control"  placeholder="Votre email" required>
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+        </div>
+      </div><br>
+
+      <div class="form-group mb-3"> <!-- Ajout de la classe mb-3 pour la marge inférieure -->
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required>
+          <button id="togglePassword" type="button" class="btn btn-toggle-password"><i class="fas fa-eye"></i></button>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password"></label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Votre mot de passe" required>
-      </div>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <button type="submit" class="btn btn-primary btn-yellow" style="margin-top: 10px;">Login</button>
-        <a href="forgot_password.html">Forgot Password?</a>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <button type="submit" class="btn btn-primary btn-yellow" style="margin-top: 10px;">Se connecter</button>
+        <a href="forgot_password.html" style="color: blue; margin-top: 10px; margin-left: 10px;">Mot de passe oublié?</a>
       </div>
     </form>
+    <!-- End Login Form -->
+
     <br><br><br>
-    <p style="color: black; font-family: Arial, sans-serif;">
-      N'avez-vous pas un compte ? Créez-en un  <a href="register.html">ici</a>
+    <p style="color: gray; font-family: Arial, sans-serif;">
+      Vous n'avez pas de compte ? Créez-en un <a href="register.html">ici</a>
     </p>
   </div>
 </div>
+  </main>
 
-
-
-   
-  </main><!-- End #main -->
-
-  
-  <!-- ======= Footer ======= -->
+  <!-- Footer -->
   <footer id="footer" class="footer">
-
     <div class="footer-content position-relative">
       <div class="container">
         <div class="row">
-
-
-           
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>FASEG-UAC</h4>
             <ul>
-              <li><a href="#"><strong>Phone:</strong> +229 97247851</a></li>
-              <li><a href="#"><strong>Email:</strong>ronaldoownpurpose@gmial.com</a></li>
+              <li><a href="#"><strong>Téléphone :</strong> +229 97247851</a></li>
+              <li><a href="#"><strong>Email :</strong> ronaldoownpurpose@gmail.com</a></li>
             </ul>
           </div>
 
@@ -109,10 +119,10 @@
             <h4>Nos Services</h4>
             <ul>
               <li><a href="#">Réclamation de note</a></li>
-              <li><a href="#">Demande d'acte academique</a></li>
-
+              <li><a href="#">Demande d'acte académique</a></li>
             </ul>
           </div>
+
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Réseaux sociaux</h4>
             <div class="social-links d-flex mt-3">
@@ -122,17 +132,14 @@
               <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
+
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Liens utiles</h4>
             <ul>
-              <li><a href="contact.html">A propos</a></li>
-              <li><a href="#">Termes et confidentialités</a></li>
-
+              <li><a href="contact.html">À propos</a></li>
+              <li><a href="#">Termes et confidentialité</a></li>
             </ul>
           </div>
-          <!-- End footer links column-->
-
- 
         </div>
       </div>
     </div>
@@ -140,19 +147,15 @@
     <div class="footer-legal text-center position-relative">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>faseg/uac</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-
+          &copy; Copyright <strong><span>FASEG/UAC</span></strong>. Tous droits réservés
         </div>
       </div>
     </div>
-
   </footer>
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
@@ -168,6 +171,21 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script>
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.querySelector(".btn-toggle-password");
 
+    togglePassword.addEventListener("click", function () {
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+
+      // Toggle the eye icon
+      if (type === "text") {
+        this.innerHTML = '<i class="fas fa-eye-slash"></i>';
+      } else {
+        this.innerHTML = '<i class="fas fa-eye"></i>';
+      }
+    });
+  </script>
+</body>
 </html>

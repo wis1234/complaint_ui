@@ -1,0 +1,170 @@
+body{
+    background-color: #f2f2f2;
+}
+.login {
+   font-family: Arial, sans-serif;
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   width: 400px;
+   margin: auto;
+
+}
+.register
+{
+    font-family: Arial, sans-serif;
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 120vh;
+   width: 400px;
+   margin: auto;
+}
+
+.container {
+   background-color: #fff;
+   border-radius: 8px;
+   padding: 20px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.avatar {
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   margin: 0 auto 20px;
+  background-color: #f2f2f2;
+   color: #fff;
+   font-size: 48px;
+   line-height: 100px;
+   text-align: center
+}
+.connexion{
+   text-align: center;
+}
+.form-group {
+   margin-bottom: 20px;
+}
+
+label {
+   display: block;
+   font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+
+button {
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   padding: 10px 20px;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #0056b3;
+}
+
+.right{
+   float: right;
+   color: gray
+}
+/* Ajoutez ici vos styles personnalisés si nécessaire */
+
+/* Pour rendre l'image responsive */
+.v-image {
+position: relative;
+overflow: hidden;
+max-width: 100%;
+}
+
+.v-responsive__sizer {
+padding-bottom: 25.452%;
+}
+
+.v-image__image {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+}
+.card-header {
+background-color: #f8f9fa;
+font-weight: bold;
+}
+.drink-item {
+padding: 10px;
+
+display: flex;
+justify-content: space-between;
+}
+.drink-label {
+
+}
+.btn-radio {
+
+}
+.custom-radio .custom-control-label::before {
+border-radius: 50%;
+}
+.custom-radio .custom-control-label::after {
+border-radius: 50%;
+}
+/* Ajoutez les styles pour votre pied de pae */
+footer {
+margin-top: 45px;
+position: relative;
+bottom: 0;
+width: 100%;
+background-color: #333; /* Changez la couleur de fond selon votre préférence */
+color: white; /* Changez la couleur du texte selon votre préférence */
+padding: 20px; /* Ajoutez un espace intérieur pour le pied de page */
+}
+
+/* Ajoutez des styles pour le contenu principal pour éviter qu'il ne soit caché par le pied de page */
+main {
+padding-bottom: 60px; /* Ajustez cette valeur pour correspondre à la hauteur de votre pied de page */
+}
+
+
+.form-group {
+   margin-bottom: 20px;
+}
+label {
+   font-weight: bold;
+}
+.pagination-container {
+   text-align: center;
+}
+.pagination {
+   display: inline-block;
+}
+.pagination li {
+   display: inline;
+   margin: 0 10px;
+}
+.pagination a {
+   text-decoration: none;
+   font-weight: bold;
+   padding: 5px 10px;
+   background-color: #007bff;
+   color: #fff;
+   border-radius: 5px;
+}
+
+

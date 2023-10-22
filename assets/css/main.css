@@ -505,7 +505,7 @@ section {
 
   .mobile-nav-show {
     position: relative;
-    color:black;
+    color:white;
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -2585,7 +2585,7 @@ section {
   background: url("../img/footer-bg.jpg") top center no-repeat;
   background-size: cover;
   font-size: 14px;
-  padding: 80px 0 60px 0;
+  padding: 20px 0 10px 0;
   position: relative;
 }
 
@@ -2597,7 +2597,7 @@ section {
 }
 
 .footer .footer-content .footer-info {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .footer .footer-content .footer-info h3 {
@@ -2648,7 +2648,7 @@ section {
 }
 
 .footer .footer-content .footer-links {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .footer .footer-content .footer-links ul {
@@ -2706,6 +2706,11 @@ header.header nav ul li a {
     @media (max-width: 991px) {
   header.header nav ul li a {
     color: gray;
+  }
+}
+@media (max-width: 991px) {
+  header.header nav ul li a {
+    background-color: white;
   }
 }
 
@@ -2861,3 +2866,61 @@ ul.list-unstyled li {
     font-size: 14px; /* Réduisez la taille de la police pour une meilleure lisibilité */
   }
 }
+
+/* footer styling */
+
+/* make h2 responsive on small screen in forgot password file */
+/* Define a base font size for h2 */
+h2.responsive-heading {
+  font-size: 50px;
+  font-weight: bold; /* You can adjust the size as needed */
+}
+
+/* Media query for screens with a maximum width of 768px (adjust the value as needed) */
+@media (max-width: 768px) {
+  h2.responsive-heading {
+    font-size: 50px;
+    font-weight: bold;
+     /* Adjust the font size for smaller screens */
+  }
+}
+
+/* login styling about h2 responsivity*/
+
+.login-box {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  height: 335px; /* Ajustez la hauteur au besoin */
+}
+
+/* Login h2 responsivity */
+.breadcrumbs h2 {
+  font-size: 50px; /* Taille de police par défaut pour h2 */
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs h2 {
+    font-size: 50px; /* Ajustez la taille de la police pour les écrans plus petits */
+  }
+}
+
+@media (max-width: 576px) {
+  .breadcrumbs h2 {
+    font-size: 50px; /* Ajustez la taille de la police pour les écrans encore plus petits */
+  }
+}
+/* selecteur de langue */
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Ajustez la marge selon vos préférences */
+}
+
+.gtranslate_wrapper {
+  margin-top: -5px; /* Ajustez la position verticale selon vos besoins */
+}
+
+
