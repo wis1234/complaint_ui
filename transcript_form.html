@@ -53,10 +53,10 @@
     <!-- Breadcrumbs -->
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-        <h2 style="font-weight: bold; font-size: 40px;">Réclamation</h2>
+        <h2 style="font-weight: bold; font-size: 40px;">Bulletin</h2>
         <ol>
           <li><a href="index.html">Accueil</a></li>
-          <li class="white-text">Réclamation</li>
+          <li class="white-text">demande de Bulletin</li>
         </ol>
       </div>
     </div>
@@ -69,7 +69,7 @@
           </div>
         </div>
 
-        <form action="http://127.0.0.1:8000/api/complaints" method="post" enctype="multipart/form-data">
+        <form action="http://127.0.0.1:8000/api/transcripts" method="post" enctype="multipart/form-data">
           <!-- Step 1: Information personnelle -->
           <div class="col-lg-4 form-container form-step" id="step1">
             <fieldset>
@@ -103,15 +103,7 @@
                 <input type="text" name="mat" class="form-control" id="mat" placeholder="17104018" maxlength="8">
               </div>
 
-              <div class="form-group">
-                <label for="field">Filière:</label>
-                <select id="field" class="form-control" name="field">
-                  <optgroup label="">
-                    <option value="Sciences Economiques">Sciences Economiques</option>
-                    <option value="Sciences de Gestion">Sciences de Gestion</option>
-                  </optgroup>
-                </select>
-              </div>
+
               <!-- Add a "Next" button to move to the next step (Step 2) -->
               <div class="text-center">
                 <button type="button" onclick="nextStep(2)" class="btn btn-primary">Suivant</button>
@@ -123,11 +115,21 @@
           <div class="col-lg-4 form-container form-step" id="step2">
             <fieldset>
               <div class="form-group">
-                <p style="font-size: larger; text-decoration: underline;">Information de réclamation</p>
-                <label for="exam_type">Session:</label>
+                <p style="font-size: larger; text-decoration: underline;">Information du document</p>
+                <label for="exam_type">Semestre:</label>
                 <select name="exam_type" id="exam_type">
-                  <option value="session normale">session normale</option>
-                  <option value="session de rattrapage">session de rattrapage</option>
+                  <option value="session normale">Semestre 1 </option>
+                  <option value="session de rattrapage">Semestre 2</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="field">Filière:</label>
+                <select id="field" class="form-control" name="field">
+                  <optgroup label="">
+                    <option value="Sciences Economiques">Sciences Economiques</option>
+                    <option value="Sciences de Gestion">Sciences de Gestion</option>
+                  </optgroup>
                 </select>
               </div>
 
@@ -150,22 +152,7 @@
               </div>
 
               <div class="form-group">
-                <label for="complain_type">Motif:</label>
-                <select name="complain_type" id="complain_type">
-                  <option value="Contestation de note">Contestation de note</option>
-                  <option value="Omission de note">Omission de note</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="ecue_sub">Unité d'Enseignement:</label>
-                <select id="ecue_sub" class="form-control" name="ecue_sub">
-                  <optgroup label="Veuillez sélectionner l'UE concernée">
-                    <option value="Droit des affaires-Anglais commerciale">Droit des affaires-Anglais commerciale</option>
-                    <option value="Economie">Economie</option>
-                    <option value="Gestion-comptabilité">Gestion-comptabilité</option>
-                  </optgroup>
-                </select>
-              </div>
+
               <!-- Add "Previous" and "Next" buttons for navigation between Step 1 and Step 3 -->
               <div class="text-center">
                 <button type="button" onclick="prevStep(1)" class="btn btn-primary">Précédent</button>
@@ -178,18 +165,11 @@
           <div class="col-lg-4 form-container form-step" id="step3">
             <fieldset>
               <div class="form-group">
-                <p style="font-size: larger; text-decoration: underline;">Informations complémentaires</p>
-                <label for="ecue">Elément Constitutif d'Unité d'Enseignement:</label>
-                <select id="ecue" class="form-control" name="ecue">
-                  <optgroup label="Veuillez sélectionner l'ECUE concerné">
-                    <option value="Anglais commerciale">Anglais commerciale</option>
-                    <option value="Macro1">Macro1</option>
-                    <option value="comptabilité analytique">comptabilité analytique</option>
-                  </optgroup>
-                </select>
+                <p style="font-size: larger; text-decoration: underline;">Informations complémentaire</p>
+              
               </div>
               <div class="form-group">
-                <label for="fiche_inscription">Fiche d'inscription:</label>
+                <label for="fiche_inscription">carte d'etudiant:</label>
                 <input type="file" class="form-control-file" id="fiche_inscription" name="fiche_inscription" placeholder="Votre fiche de préinscription validée">
               </div>
               <div class="form-group">

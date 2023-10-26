@@ -481,11 +481,13 @@ section {
     margin-left: 5px;
   }
 
+
+  /* mobile nav bar hover color */
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: black;
   }
 
   .navbar .dropdown ul,
@@ -2708,6 +2710,11 @@ header.header nav ul li a {
     color: gray;
   }
 }
+@media (max-width: 991px) {
+  header.header nav ul li a {
+    background-color: white;
+  }
+}
 
     /* Add this CSS rule to style the logo */
     .logo img {
@@ -2867,13 +2874,16 @@ ul.list-unstyled li {
 /* make h2 responsive on small screen in forgot password file */
 /* Define a base font size for h2 */
 h2.responsive-heading {
-  font-size: 50px; /* You can adjust the size as needed */
+  font-size: 50px;
+  font-weight: bold; /* You can adjust the size as needed */
 }
 
 /* Media query for screens with a maximum width of 768px (adjust the value as needed) */
 @media (max-width: 768px) {
   h2.responsive-heading {
-    font-size: 30px; /* Adjust the font size for smaller screens */
+    font-size: 50px;
+    font-weight: bold;
+     /* Adjust the font size for smaller screens */
   }
 }
 
@@ -2900,7 +2910,7 @@ h2.responsive-heading {
 
 @media (max-width: 576px) {
   .breadcrumbs h2 {
-    font-size: 18px; /* Ajustez la taille de la police pour les écrans encore plus petits */
+    font-size: 50px; /* Ajustez la taille de la police pour les écrans encore plus petits */
   }
 }
 /* selecteur de langue */
@@ -2914,3 +2924,5 @@ h2.responsive-heading {
 .gtranslate_wrapper {
   margin-top: -5px; /* Ajustez la position verticale selon vos besoins */
 }
+
+

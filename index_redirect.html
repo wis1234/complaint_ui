@@ -72,16 +72,31 @@
     }
     /* Ajoutez des styles pour l'ombre */
     .icon-box {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      height: 220px; /* Hauteur fixe pour tous les éléments */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 20px;
-    }
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 220px; /* Fixed height for all elements */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px; /* Add margin to create space between items */
+}
+
+
+
+    /* CSS for small screens (less than 768px) */
+@media (max-width: 767px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-lg-3, .col-md-6, .col-12 {
+    width: 100%;
+  }
+}
+
   </style>
 </head>
 
@@ -101,38 +116,39 @@
    
 
     <!-- Section de la grille avec des icônes -->
-   <!-- Section de la grille avec des icônes -->
-   <section id="services-grid" style="margin-top: 30px;">
-    <div class="container" data-aos="fade-up">
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="fas fa-graduation-cap fa-3x"></i></div>
-            <h4 class="title"><a href="complaint_form.html">Réclamation de note</a></h4>
-          </div>
+  <!-- Section of the grid with icons -->
+<section id="services-grid" style="margin-top: 30px;">
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="fas fa-graduation-cap fa-3x"></i></div>
+          <h4 class="title"><a href="complaint_form.html">Réclamation de note</a></h4>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="fas fa-file-alt fa-3x"></i></div>
-            <h4 class="title"><a href="demande_de_releve_de_note.html">Demande de relevé de note</a></h4>
-          </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon"><i class="fas fa-file-alt fa-3x"></i></div>
+          <h4 class="title"><a href="transcript_form.html">Demande de relevé de note</a></h4>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="fas fa-certificate fa-3x"></i></div>
-            <h4 class="title"><a href="demande_d_attestation_de_succes.html">Demande d'attestation </a></h4>
-          </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon"><i class="fas fa-certificate fa-3x"></i></div>
+          <h4 class="title"><a href="certificate_form.html">Demande d'attestation</a></h4>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="fas fa-award fa-3x"></i></div>
-            <h4 class="title"><a href="demande_de_diplome.html">Demande de diplôme</a></h4>
-          </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><i class="fas fa-award fa-3x"></i></div>
+          <h4 class="title"><a href="diploma_form.html">Demande de diplôme</a></h4>
         </div>
       </div>
     </div>
-  </section>
-    <!-- End Registration Form -->
+  </div>
+</section>
+
+    <!-- End section -->
   </main>
 
   <!-- Footer -->

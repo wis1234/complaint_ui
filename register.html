@@ -87,66 +87,66 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- Registration Form -->
-    <section id="registration-form" class="registration-form">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <form class="registration-form" action="http://127.0.0.1:8000/api/users" method="post">
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-user"></i></span>
-                  <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Prénom" required>
+       <!-- Registration Form -->
+       <section id="registration-form" class="registration-form">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <form class="registration-form" action="http://127.0.0.1:8000/api/users" method="post">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Prénom" required>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-user"></i></span>
-                  <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Nom" required>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Nom" required>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class " input-group">
-                  <span class="input-group-text"><i class="fas fa-id-card"></i></span>
-                  <input type="text" id="matricule" name="mat_number" class="form-control" placeholder="Numéro matricule" required>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                    <input type="text" id="matricule" name="mat_number" class="form-control" placeholder="Numéro matricule" required>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Téléphone" required>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Téléphone" required>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                  <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required>
-                  <button id="togglePassword" type="button" class="btn btn-toggle-password"><i class="fas fa-eye"></i></button>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required>
+                    <button id="togglePassword" type="button" class="btn btn-toggle-password"><i class="fas fa-eye"></i></button>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                  <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Mot de passe" required>
-                  <button id="toggleConfirmPassword" type="button" class="btn btn-toggle-password"><i class="fas fa-eye"></i></button>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirmez le mot de passe" required>
+                    <button id="toggleConfirmPassword" type="button" class="btn btn-toggle-password"><i class="fas fa-eye"></i></button>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group" style="margin-top: 10px;">
-                <button type="submit" id="register" class="btn btn-primary">S'inscrire</button>
-              </div>
-              <br><br>
-              <p>Déjà inscrit ? Connectez-vous <a href="login.html">ici</a></p>
-            </form>
+                <div class="form-group" style="margin-top: 10px;">
+                  <button type="submit" id="register" class="btn btn-primary">S'inscrire</button>
+                </div>
+                <br><br>
+                <p>Déjà inscrit ? Connectez-vous <a href="login.html">ici</a></p>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     <!-- End Registration Form -->
   </main>
 
@@ -219,15 +219,15 @@
   <script>
     const passwordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("confirmPassword");
-    const togglePassword = document.querySelector(".btn-toggle-password");
-    const toggleConfirmPassword = document.querySelector(".btn-toggle-confirm-password");
+    const togglePassword = document.querySelector("#togglePassword");
+    const toggleConfirmPassword = document.querySelector("#toggleConfirmPassword");
     const registerButton = document.getElementById("register");
 
     function togglePasswordVisibility(inputElement, toggleButton) {
       const type = inputElement.getAttribute("type") === "password" ? "text" : "password";
       inputElement.setAttribute("type", type);
 
-      // Toggle l'icône de l'œil
+      // Toggle the eye icon
       if (type === "text") {
         toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i>';
       } else {
@@ -249,9 +249,10 @@
 
       if (passwordValue !== confirmPasswordValue) {
         alert("Les mots de passe ne correspondent pas.");
-        event.preventDefault(); // Empêche l'envoi du formulaire si les mots de passe ne correspondent pas
+        event.preventDefault(); // Prevents the form from being submitted if passwords don't match
       }
     });
   </script>
+
 </body>
 </html>
