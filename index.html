@@ -32,12 +32,43 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: UpConstruction - v1.3.0
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Ajouter le style pour la boîte de pop-up -->
+    <style>
+      /* Style pour la boîte de pop-up */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 100px;
+        width: 100px;
+        height: 100%;
+        /* background-color: rgba(255, 255, 255, 0.9); */
+        z-index: 9999;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+      }
+  
+      .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+  
+      .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size:x-large;
+        cursor: pointer;
+      }
+    </style>
+
+
 </head>
 
 <body>
@@ -49,14 +80,13 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo.jpeg" alt="FASEG">
-        <!-- <h1>UpConstruction<span>.</span></h1> -->
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <!-- <li><a href="index.html" class="active"><A>Acceuil</A></a></li> -->
+
           <li><a href="index.html">Accueil</a></li>
           <!-- <li><a href="process.html">Demarche</a></li> -->
           <li class="dropdown"><a href=""><span>Démarches</span> <i
@@ -84,22 +114,11 @@
 
                 </ul>
               </li>
-               <!-- <li><a href="#">A propos</a></li> -->
-              <!-- <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> -->
             </ul>
           </li>
           <li><a href="contact.html">A propos</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <!-- <li class="language-selector">
-            <div class="gtranslate_wrapper">
-              <script>
-                window.gtranslateSettings = {"default_language":"fr","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"};
-              </script>
-              <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-            </div>
-          </li> -->
+
           
           
           <li><a href="contact.html"></a></li>
@@ -135,8 +154,14 @@
             <p data-aos="fade-up">La FASEG à votre service autrement</p>
             <!-- <p data-aos="fade-up"> </p> -->
 
-            
             <p data-aos="fade-up">Désormais, vos réclamations de note et demande d'actes academiques en toute simplicité et en toute facilité</p>
+
+            <div id="popup" class="popup">
+              <div class="popup-content">
+                <span class="close-popup" onclick="closePopup()">&times;</span>
+                <div id="popup-text"></div>
+              </div>
+            </div>
 
             <a data-aos="fade-up" data-aos-delay="200" href="register.html" class="btn-get-started">Commencer</a>
           </div>
@@ -247,6 +272,37 @@
 <script src="assets/js/main.js"></script>
 
 
+  <!-- Code JavaScript pour la boîte de pop-up -->
+  <script>
+    // Fonction pour afficher la boîte de pop-up
+    function showPopup() {
+      var popup = document.getElementById('popup');
+      var popupText = document.getElementById('popup-text');
+      popup.style.display = 'block';
+
+      // Texte à afficher progressivement
+      var textToDisplay = "Plus besoin de vous déplacer pour soumettre vos dossiers de réclamation et de demande d'actes académique";
+      var currentIndex = 0;
+      var interval = setInterval(function() {
+        if (currentIndex <= textToDisplay.length) {
+          popupText.textContent = textToDisplay.substring(0, currentIndex);
+          currentIndex++;
+        } else {
+          clearInterval(interval);
+          setTimeout(closePopup, 3000); // Ferme la boîte après 3 secondes
+        }
+      }, 100); // Change le texte toutes les 100 millisecondes
+    }
+
+    // Fonction pour fermer la boîte de pop-up
+    function closePopup() {
+      var popup = document.getElementById('popup');
+      popup.style.display = 'none';
+    }
+
+    // Afficher la boîte de pop-up après le chargement de la page
+    window.addEventListener('load', showPopup);
+  </script>
 </body>
 
 </html>
