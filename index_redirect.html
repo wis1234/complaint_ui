@@ -29,19 +29,19 @@
 
   <style>
     .service-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); /* Responsive grid */
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow to the container */
     }
 
     .service-title {
+      flex: 0 0 calc(50% - 20px);
       background-color: #fff;
       border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to each item */
     }
 
     .service-title i {
@@ -50,12 +50,17 @@
       font-weight: bolder;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 395px) {
+      .service-container {
+        flex-direction: column;
+      }
+
       .service-title {
-        flex: 0 0 100%; /* Display in a single column for smaller screens */
+        flex: 0 0 calc(100% - 20px);
       }
     }
   </style>
+
 </head>
 <body>
   <main id="main">
@@ -141,7 +146,7 @@
       </div>
     </div>
     <div class="footer-legal text-center position-relative">
-      <div class "container">
+      <div class="container">
         <div class="copyright">
           &copy; Copyright <strong><span>FASEG/UAC</span></strong>. All Rights Reserved
         </div>
