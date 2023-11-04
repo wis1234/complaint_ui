@@ -62,7 +62,8 @@
   </style>
 
 </head>
-<body>
+<body data-authenticated="{{ Auth::check() }}">
+
   <main id="main">
     <!-- Breadcrumbs -->
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
@@ -173,6 +174,19 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const isAuthenticated = document.body.getAttribute('data-authenticated');
+        const currentURL = window.location.pathname;
+
+        if (isAuthenticated !== 'true') {
+            // Redirect the user to the login page if they are not authenticated
+            window.location.href = 'login.html'; // Replace with the actual login page URL
+        }
+    });
+</script> -->
+
 
 </body>
 </html>

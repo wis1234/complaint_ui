@@ -59,7 +59,10 @@
     <i class="fas fa-user fa-4x" style="color: blue; display: block; margin-left: 45%; margin-top: 10px;"></i><br><br>
     <!-- Icône de personne centrée -->
     <!-- Login Form -->
-    <form class="login-form" method="post" action="http://127.0.0.1:8000/api/login">
+
+    <div id="error-message" style="color: red;"></div>
+
+    <form class="login-form" method="post" action="">
       <div class="form-group">
         <div class="input-group">
           <span class="input-group-text"><i class="fas fa-envelope"></i></span>
@@ -76,15 +79,15 @@
       </div>
 
       <div class="d-flex justify-content-between align-items-center">
-        <button type="submit" class="btn btn-primary btn-yellow" style="margin-bottom: 60px; height: 55px; width: 160px;">Se connecter</button>
-        <a href="forgot_password.html" style="color: blue; margin-bottom: 50px; height: 55px; margin-left: 10px;">Mot de passe oublié?</a>
+        <button type="submit" class="btn btn-primary btn-yellow" style="margin-bottom: 60px; height: 40px; width: 135px;">Se connecter</button>
+        <a href="forgot_password.html" style="color: blue; margin-bottom: 30px; height: 55px; margin-left: 10px;">Mot de passe oublié?</a>
       </div>
     </form>
     <!-- End Login Form -->
 
     <br><br><br>
     <p style="color: gray; font-family: Arial, sans-serif; margin-bottom: 1000px;">
-      Vous n'avez pas de compte ? <a href="register.html">  Créez-en un ici</a>
+      N'avez-vous pas de compte ? <a href="register.html">  Créez-en un</a>
     </p>
   </div>
 </div>
@@ -160,20 +163,44 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    const passwordInput = document.getElementById("password");
-    const togglePassword = document.querySelector(".btn-toggle-password");
+    document.querySelector('.login-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the default form submission behavior
 
-    togglePassword.addEventListener("click", function () {
-      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-      passwordInput.setAttribute("type", type);
+        // Clear the previous error message
+        const errorDiv = document.getElementById('error-message');
+        errorDiv.textContent = '';
 
-      // Toggle the eye icon
-      if (type === "text") {
-        this.innerHTML = '<i class="fas fa-eye-slash"></i>';
-      } else {
-        this.innerHTML = '<i class="fas fa-eye"></i>';
-      }
+        const formData = new FormData(this); // Get form data
+
+        fetch('http://127.0.0.1:8000/api/login', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Check if the login was successful and handle the response
+            if (data.access_token) {
+                // Store the access token securely, e.g., in a cookie or local storage
+                // You can use localStorage for a simple example (ensure you have a more secure method in production)
+                localStorage.setItem('access_token', data.access_token);
+
+                // Redirect the user to a new page or perform other actions
+                window.location.href = 'index_redirect.html';
+            } else {
+                // Handle login failure, show an error message
+                errorDiv.textContent = 'Login failed. Please check your credentials.';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Handle any errors here
+            errorDiv.textContent = 'An error occurred while trying to log in. Please try again later.';
+        });
     });
-  </script>
+</script>
+
+
+
+
 </body>
 </html>
